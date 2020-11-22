@@ -1,0 +1,76 @@
+doctype html
+html
+	head
+		meta(charset="utf-8")
+		title No name coders
+		meta(name="keywords" content="")
+		meta(name="description" content="")
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+		link(rel='preconnect' href='https://fonts.gstatic.com')
+		link(href='https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap' rel='stylesheet')
+		link(rel="stylesheet" href="css/styles.css")
+	body.inner-page.project-page
+		include includes/_mixins.pug
+		include includes/_header.pug
+		+dots('project-page__dots')
+
+		.page-content-wrap.container
+			+elipce('project-page__elipce')
+
+			.project
+				.project__intro
+					.project__left
+						img(src="img/project-img.jpg" alt="")
+					.project__right
+						h1.page-title The name of project
+						.project__table
+							span.project__table-name Customer:
+							strong.project__table-val Pablo Escobar
+							span.project__table-name Exectuion period:
+							strong.project__table-val 1 month
+							span.project__table-name Technology:
+							.project__table-chips
+								span.chip.project__table-chip qqq
+								span.chip.project__table-chip qqq few ewefwf
+								span.chip.project__table-chip qqq
+								span.chip.project__table-chip qqq
+								span.chip.project__table-chip qqqdq wqdq 
+								span.chip.project__table-chip qqqdq wqdq 
+								span.chip.project__table-chip qqqdq wqdq 
+								span.chip.project__table-chip qqqdq wqdq
+						p Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, ipsum autem non adipisci quos laborum natus asperiores consectetur sint quibusdam numquam odio corporis repudiandae sunt fugit, assumenda delectus molestias hic!
+						a.btn.btn_rounded.btn_medium.project__intro-btn(href="#") Go to website
+				.project__alert.alert
+					h2.title.project__alert-title Problem and solution
+					p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dui proin tortor habitant sit at. In ut integer tincidunt quis auctor orci. Adipiscing faucibus tincidunt faucibus arcu aliquam diam augue eu. Pellentesque ornare facilisi cursus at nullam. Facilisis in sed imperdiet pretium sociis vel vehicula congue. Habitant suspendisse aliquam libero eros, ultricies aliquet. Lacinia sit nibh fermentum, imperdiet quisque. Ullamcorper venenatis nibh ipsum diam diam fusce vitae. Fermentum molestie nisi, nunc tortor amet, quis.
+				.project__content
+					.project__box
+						img.img-floated-left.img(src="https://www.placecage.com/300/300", alt="")
+						h2.title Fonts and colors
+						p Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque quis ullam nesciunt expedita nulla nobis tempora, quisquam dolore odio pariatur consectetur fuga saepe nihil laudantium dolorum, maxime eveniet laboriosam voluptates? Nesciunt ipsa, magnam numquam saepe magni suscipit fugiat, reprehenderit fuga amet excepturi facilis mollitia optio maxime, dicta provident exercitationem voluptate impedit vel molestias voluptatibus quo illum expedita consequatur beatae? Delectus voluptatibus ut hic nostrum provident iste ad, voluptatem recusandae veritatis obcaecati, officia quis nam incidunt exercitationem. Quas blanditiis totam aperiam consectetur voluptatum sint sequi nobis, ratione aliquam nostrum fuga fugit, eveniet culpa recusandae iste assumenda quia necessitatibus! Explicabo, illum provident?
+					.project__box
+						h2.title Animations
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores deserunt maxime repellat. Nemo reiciendis voluptatem unde. Officia ea quidem in enim tempora veritatis obcaecati labore exercitationem! Dolore itaque est quia sequi a? Est aliquam quam tenetur esse culpa voluptas similique voluptatem hic nemo, eius modi illo totam saepe error deseru620
+						.project__flex-block
+							img(src="https://www.placecage.com/620/380", alt="")
+							img(src="https://www.placecage.com/620/380", alt="")
+					.project__box
+						h2.title Page preview
+						p Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas ipsum eos, repellendus obcaecati quibusdam deserunt repellat ab ipsa deleniti tempora praesentium officia distinctio quos accusantium veritatis sunt ex, nostrum voluptas suscipit quod! Eius quibusdam molestiae reiciendis nam quae, delectus, obcaecati doloribus molestias quas consequatur, ipsum laudantium accusantium repellendus earum nostrum.
+						img(src="https://www.placecage.com/1400/600" style="margin-top: 50px")
+
+
+			section.inner-page__contacts
+				.inner-page__contacts-left
+					include includes/_contact-data
+				.inner-page__contacts-right
+					include includes/_contact-form
+
+		include includes/_footer
+	.svg-sprite.is-hidden
+		include ../img/svg-output/svg-sprite.svg
+
+
+	
+		//todo deal with svg icons on hover
+		//another slider arrow icons

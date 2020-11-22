@@ -2,11 +2,9 @@ doctype html
 html
 	head
 		meta(charset="utf-8")
-		block title
-			title Title
-		block head
-			meta(name="keywords" content="")
-			meta(name="description" content="")
+		title Title
+		meta(name="keywords" content="")
+		meta(name="description" content="")
 		meta(name="viewport" content="width=device-width, initial-scale=1")
 		link(rel='preconnect' href='https://fonts.gstatic.com')
 		link(href='https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap' rel='stylesheet')
@@ -15,16 +13,18 @@ html
 		link(rel="stylesheet" href="css/slick-theme.css")
 		link(rel="stylesheet" href="css/styles.css")
 	body
+		include includes/_mixins.pug
+
 		#fullpage.fullpage-wrap
-			
-			include _header.pug
+			include includes/_header.pug
 
 			section.section.intro
 				.container
 					h1.intro__title make your work <span class="intro__title-span"> easier</span>
 					p.intro__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus volutpat in blandit blandit ac. Lectus metus non aliquet pellentesque. Sit porttitor ut elementum massa fringilla mauris. Fames amet in venenatis lectus in eleifend.
 					a(href="#").link.intro__btn Learn more
-				img.intro__elipce(src="img/elipce.svg", alt="")
+
+				+elipce('intro__elipce')
 			
 			section.section.about
 				
@@ -47,8 +47,9 @@ html
 						+aboutItem('tech', 'New Technologies', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta, voluptas?')
 						+aboutItem('speed', 'Speed', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta, voluptas?')
 				
-				img.dots.about__dots.about__dots_left(src="img/dots.svg", alt="")
-				img.dots.about__dots.about__dots_right(src="img/dots.svg", alt="")
+
+				+dots('about__dots about__dots_left')
+				+dots('about__dots about__dots_right')
 			section.section.services
 				.container
 					.services__box
@@ -89,16 +90,16 @@ html
 										strong.cases__item-title The name of project
 										p.cases__item-subtitle Pablo Escobar | for 1 month
 										.cases__item-chips
-											span.cases__item-chip CSS3
-											span.cases__item-chip HTML
-											span.cases__item-chip React.js
+											span.chip CSS3
+											span.chip HTML
+											span.chip React.js
 										p.cases__item-text Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos nostrum repellat nulla. Ex cupiditate voluptates veniam, corporis consectetur sapiente expedita necessitatibus, mollitia ipsa, voluptatem eius alias optio! Vero qui neque dicta tempora totam debitis quidem! Nostrum, eveniet accusantium aliquid dolores labore distinctio cupiditate magni quas, aliquam atque repellendus sint. Voluptas!
 										a.cases__item-link.link(href="#") See Details
 				
 							#cases-slider.cases__slider
 								+casesItem
 								+casesItem
-				img.dots.cases__dots(src="img/dots.svg", alt="")
+				+dots('cases__dots')
 				
 			section.section.tech
 				.container
@@ -123,43 +124,23 @@ html
 							p.career__item-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eveniet dolore natus distinctio quod? Qui, minima! Ea facere minus eveniet amet! Vel perspiciatis aliquid qui saepe, id, voluptas unde voluptatibus enim ea tempora dolores? Saepe eaque nobis voluptatem hic rem tempore quos beatae, id aperiam, quasi recusandae consequatur nemo aut.
 							a.btn.btn_wide.career__item-btn(href="#") Learn more
 				.career__bg
-				img.dots.career__dots(src="img/dots.svg")
+				+dots('career__dots')
 			
 			//contacts
-			section.section.contacts
+			section.section.contacts.active
 				.container
 					.contacts__box
 						.contacts__left
-							h2.section-title Say hello to us
-							.contacts__data
-								.contacts__item
-									svg.contacts__item-svg.icon-envelope: use(xlink:href="#envelope")
-									small.contacts__item-label Email
-									a(href="mailto:#") sitename@gmail.com
-								.contacts__item
-									svg.contacts__item-svg.icon-phone: use(xlink:href="#phone")
-									small.contacts__item-label Phone
-									a(href="tel:#") +380995444444
-								.contacts__item.contacts__item_fullwidth
-									svg.contacts__item-svg.icon-map-point: use(xlink:href="#map-point")
-									small.contacts__item-label Adress
-									p Kyiv, Street Name, 12
-							form.contacts__form
-								strong.contacts__form-title Contact us
-								.contacts__form-inputs
-									input.contacts__form-name(type="text" placeholder="Enter your name")
-									input.contacts__form-email(type="email" placeholder="Enter your email")
-									textarea.contacts__form-textarea(placeholder="Enter Text..." name="", cols="30", rows="10")
-								button.link.link_wide(type="submit") Submit
-									
+
+							include includes/_contact-data
+							include includes/_contact-form									
 
 						.contacts__right
 							.contacts__map-wrap
 								iframe.map(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.4769823182796!2d30.430333315731314!3d50.450841979475406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cc3c0eb1581d%3A0x8ec1705b1e980e6!2z0LLRg9C70LjRhtGPINCS0LjQsdC-0YDQt9GM0LrQsCwgODIsINCa0LjRl9Cy!5e0!3m2!1suk!2sua!4v1490277531428' frameborder='0' style='border:0' allowfullscreen='')
-				
-				.footer
-					p Copyright © 2020 Site-name.com All rights reserved.
-				img.dots.contacts__dots(src="img/dots.svg")
+				.footer-absolute
+					include includes/_footer
+				+dots('contacts__dots')
 			//end contacts
 
 
