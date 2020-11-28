@@ -11,7 +11,7 @@ html
 		link(rel="stylesheet" href="css/styles.css")
 	body.inner-page.project-page
 		include includes/_mixins.pug
-		include includes/_header.pug
+		include _header.pug
 		+dots('project-page__dots')
 
 		.page-content-wrap.container
@@ -20,7 +20,7 @@ html
 			.project
 				.project__intro
 					.project__left
-						img(src="img/project-img.jpg" alt="")
+						img.project__intro-img(src="img/project-img.jpg" alt="")
 					.project__right
 						h1.page-title The name of project
 						.project__table
@@ -57,7 +57,8 @@ html
 					.project__box
 						h2.title Page preview
 						p Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas ipsum eos, repellendus obcaecati quibusdam deserunt repellat ab ipsa deleniti tempora praesentium officia distinctio quos accusantium veritatis sunt ex, nostrum voluptas suscipit quod! Eius quibusdam molestiae reiciendis nam quae, delectus, obcaecati doloribus molestias quas consequatur, ipsum laudantium accusantium repellendus earum nostrum.
-						img(src="https://www.placecage.com/1400/600" style="margin-top: 50px")
+						.project__flex-block
+							img(src="https://www.placecage.com/1400/600" alt="")
 
 
 			section.inner-page__contacts
@@ -70,7 +71,8 @@ html
 	.svg-sprite.is-hidden
 		include ../img/svg-output/svg-sprite.svg
 
-
+	script(src="js/jquery-2.2.4.min.js")
+	script(src="js/app.js")
 	
 		//todo deal with svg icons on hover
 		//another slider arrow icons

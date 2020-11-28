@@ -16,7 +16,7 @@ html
 		include includes/_mixins.pug
 
 		#fullpage.fullpage-wrap
-			include includes/_header.pug
+			include _header.pug
 
 			section.section.intro
 				.container
@@ -53,7 +53,8 @@ html
 			section.section.services
 				.container
 					.services__box
-						img.services__img(src="img/services-bg.jpg")
+						.services__left
+							img.services__img(src="img/services-bg.jpg")
 						.services__right
 							h2.section-title Services
 							.services__tab-container
@@ -99,6 +100,8 @@ html
 							#cases-slider.cases__slider
 								+casesItem
 								+casesItem
+								+casesItem
+								+casesItem
 				+dots('cases__dots')
 				
 			section.section.tech
@@ -114,7 +117,7 @@ html
 			
 
 			section.section.career
-				.container
+				.container.career__container
 					h2.section-title Career
 					p Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, ullam porro harum provident blanditiis maiores, excepturi perspiciatis dolorem deserunt aut culpa debitis sed iusto reiciendis voluptatibus asperiores ab quo dicta. Laborum iure nihil ullam pariatur. Ab, id vitae debitis quibusdam eos facere temporibus nisi laboriosam dolor, quidem illo similique eveniet?
 					.career__box
@@ -127,7 +130,7 @@ html
 				+dots('career__dots')
 			
 			//contacts
-			section.section.contacts.active
+			section.section.contacts
 				.container
 					.contacts__box
 						.contacts__left

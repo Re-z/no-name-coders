@@ -12,7 +12,7 @@ html
 		link(rel="stylesheet" href="css/styles.css")
 	body.inner-page.vacancy-page
 		include includes/_mixins.pug
-		include includes/_header.pug
+		include _header.pug
 		+dots('vacancy-page__dots')
 
 		.page-content-wrap.container
@@ -66,4 +66,6 @@ html
 		include includes/_footer
 	.svg-sprite.is-hidden
 		include ../img/svg-output/svg-sprite.svg
+	script(src="js/jquery-2.2.4.min.js")
+	script(src="js/app.js")
 

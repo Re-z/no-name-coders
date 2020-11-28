@@ -1,0 +1,25 @@
+header.header
+	.container
+		.header__inner
+			img.header__logo(src="https://www.placecage.com/200/50")
+			.header__burger
+				span
+				span
+				span
+			nav.header__menu
+				.header__menu-mob
+					img.header__logo-mob(src="https://www.placecage.com/200/50")
+					.header__close
+						svg(class="icon-cancel"): use(xlink:href="#cancel")
+				.header__links
+					mixin headerLink(link, name)
+						a.header__link(href='#'+link)=name
+					+headerLink('about-us', 'About Us')
+					+headerLink('services', 'Services')
+					+headerLink('cases', 'Our Cases')
+					+headerLink('technology', 'Technology')
+					+headerLink('career', 'Career')
+					+headerLink('contacts', 'Contact Us')
+				.header__footer
+					p Copyright © 2020 Site-name.com All rights reserved. 
+					
