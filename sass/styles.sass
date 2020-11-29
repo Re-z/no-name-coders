@@ -15,7 +15,7 @@ $primary: #5A7DF9
     padding: 0
     outline: none
     &::selection
-        background: $primary
+        background: #7198FF
         color: white
 html
     scroll-behavior: smooth
@@ -34,6 +34,10 @@ a
     text-decoration: none
     color: inherit
     transition: .25s
+p
+  line-height: 24px
+  +r($m)
+    line-height: 20px
 ul, ol
   list-style: none
 img
@@ -86,15 +90,16 @@ button
     width: 100%
 
 .header
-  padding: 40px 0
+  padding: 20px 0
   position: fixed
   top: 0
   left: 0
   width: 100%
   z-index: 10
+  background: rgba($black, .9)
+
   +r($t)
     padding: 10px 0
-    background: rgba($black, .5)
   &__inner
     display: flex
     justify-content: space-between
@@ -512,10 +517,12 @@ button
     li
       width: 25% !important //depends on number of slides
       margin: 0 !important
+      display: flex
       +r($m)
         height: 15px !important
     button
       width: 100% !important
+      font-size: 0
       +r($m)
         height: 15px !important
       &:before
@@ -535,6 +542,7 @@ button
   +r($m)
     font-size: 12px
     padding: 2px 6px
+
 @keyframes rotation //need?
   from
     transform: rotate(0)
@@ -546,7 +554,7 @@ button
     font-weight: bold
     margin-bottom: 20px
   &__box
-    max-width: 710px
+    max-width: 720px
   &__list
     margin-top: 40px
     columns: 2
@@ -577,6 +585,7 @@ button
     right: 0
     top: 0
     z-index: -1
+    animation: flickering 5s linear infinite
     +r($t)
       height: 800px
       top: 50%
@@ -641,6 +650,8 @@ button
     +r($t)
         width: 100%
         display: block
+    +r($m)
+      padding-top: 40px
   &__right
   &__left, &__right, &__map-wrap
     max-height: 70vh
@@ -1007,4 +1018,38 @@ $svg-icons: ['speed' 44px 50px, 'quality' 52px 52px, 'approach' 70px 48px, 'team
         height: $height
 
 
+.animated-elements-container
+  z-index: 999
+  position: fixed
+  top: -100px
+  right: 0px
+  bottom: 0px
+  left: -100px
+  pointer-events: none
+  .fly
+    position: absolute
+    width: 15px
+    height: 15px
+    left: 0px
+    top: 0px
+    background-image: url('../img/moving-cross.svg')
+    background-size: cover
+    animation: rotation 3s linear infinite
+  .fly-wrap:nth-of-type(odd)
+    .fly
+      background-image: url('../img/moving-dot.svg')
 
+@keyframes flickering
+  from
+    opacity: .4
+  50%
+    opacity: 1
+  to
+    opacity: .4
+
+.animate
+  &__delay
+    &-1
+      animation-delay: .2s
+    &-2
+      animation-delay: .4s

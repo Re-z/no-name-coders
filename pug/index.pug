@@ -10,31 +10,31 @@ html
 		link(href='https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap' rel='stylesheet')
 		link(rel="stylesheet" href="css/fullpage.css")
 		link(rel="stylesheet" href="css/slick.css")
-		link(rel="stylesheet" href="css/slick-theme.css")
+		link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css")
 		link(rel="stylesheet" href="css/styles.css")
 	body
 		include includes/_mixins.pug
-
+		.animated-elements-container
 		#fullpage.fullpage-wrap
 			include _header.pug
 
-			section.section.intro
+			section.section.intro#intro
 				.container
-					h1.intro__title make your work <span class="intro__title-span"> easier</span>
-					p.intro__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus volutpat in blandit blandit ac. Lectus metus non aliquet pellentesque. Sit porttitor ut elementum massa fringilla mauris. Fames amet in venenatis lectus in eleifend.
-					a(href="#").link.intro__btn Learn more
+					h1.intro__title.animate__animated.animate__fadeInUp make your work <span class="intro__title-span"> easier</span>
+					p.intro__text.animate__animated.animate__fadeInUp.animate__delay-1  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus volutpat in blandit blandit ac. Lectus metus non aliquet pellentesque. Sit porttitor ut elementum massa fringilla mauris. Fames amet in venenatis lectus in eleifend.
+					a(href="#").link.intro__btn.animate__animated.animate__fadeInUp.animate__delay-2  Learn more
 
 				+elipce('intro__elipce')
 			
-			section.section.about
+			section.section.about#about
 				
 				.container.about__box
-					.about__left
+					.about__left.animate__animated
 						h2.section-title About us
 						p Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed corporis impedit asperiores quasi cum vero doloremque eius distinctio voluptate dolore reprehenderit excepturi magnam animi nulla consequatur reiciendis debitis harum dolor, explicabo provident molestiae! Molestiae ullam voluptatibus impedit earum quasi, sequi eaque iste totam, nobis possimus recusandae neque hic veritatis optio?
 						p Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed corporis impedit asperiores quasi cum vero doloremque eius distinctio voluptate dolore reprehenderit excepturi magnam animi nulla consequatur reiciendis debitis harum dolor, explicabo provident molestiae! Molestiae ullam voluptatibus impedit earum quasi, sequi eaque iste totam, nobis possimus recusandae neque hic veritatis optio?
 						p Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed corporis impedit asperiores quasi cum vero doloremque eius distinctio voluptate dolore reprehenderit excepturi magnam animi nulla consequatur reiciendis debitis harum dolor, explicabo provident molestiae! Molestiae ullam voluptatibus impedit earum quasi, sequi eaque iste totam, nobis possimus recusandae neque hic veritatis optio?
-					.about__right
+					.about__right.animate__animated
 						mixin aboutItem(icon, title, text)
 							.about__item
 								svg(class="icon-"+icon): use(xlink:href="#"+icon)
@@ -53,9 +53,9 @@ html
 			section.section.services
 				.container
 					.services__box
-						.services__left
+						.services__left.animate__animated
 							img.services__img(src="img/services-bg.jpg")
-						.services__right
+						.services__right.animate__animated
 							h2.section-title Services
 							.services__tab-container
 								.services__tab#dev.is-active
@@ -77,13 +77,13 @@ html
 			section.section.cases
 				.container
 					.cases__box
-						.cases__left
+						.cases__left.animate__animated
 							h2.section-title Our cases
 							p Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt neque explicabo quae dignissimos, atque ab eius nisi unde dolores? Impedit suscipit dignissimos similique eius omnis ratione animi perferendis deleniti nesciunt?
 							.cases__slider-btns
 								button#cases-slider-prev <
 								button#cases-slider-next >
-						.cases__right
+						.cases__right.animate__animated
 							mixin casesItem
 								.cases__item
 									img.cases__item-img(src="img/slider-item.jpg")
@@ -118,9 +118,9 @@ html
 
 			section.section.career
 				.container.career__container
-					h2.section-title Career
-					p Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, ullam porro harum provident blanditiis maiores, excepturi perspiciatis dolorem deserunt aut culpa debitis sed iusto reiciendis voluptatibus asperiores ab quo dicta. Laborum iure nihil ullam pariatur. Ab, id vitae debitis quibusdam eos facere temporibus nisi laboriosam dolor, quidem illo similique eveniet?
-					.career__box
+					h2.section-title.career__title.animate__animated Career
+					p.career__text.animate__delay-1.animate__animated Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, ullam porro harum provident blanditiis maiores, excepturi perspiciatis dolorem deserunt aut culpa debitis sed iusto reiciendis voluptatibus asperiores ab quo dicta. Laborum iure nihil ullam pariatur. Ab, id vitae debitis quibusdam eos facere temporibus nisi laboriosam dolor, quidem illo similique eveniet?
+					.career__box.animate__delay-2.animate__animated
 						.career__item
 							small.career__item-number No.1
 							strong.career__item-title UI/UX Designer
@@ -133,12 +133,12 @@ html
 			section.section.contacts
 				.container
 					.contacts__box
-						.contacts__left
+						.contacts__left.animate__animated
 
 							include includes/_contact-data
 							include includes/_contact-form									
 
-						.contacts__right
+						.contacts__right.animate__animated
 							.contacts__map-wrap
 								iframe.map(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.4769823182796!2d30.430333315731314!3d50.450841979475406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cc3c0eb1581d%3A0x8ec1705b1e980e6!2z0LLRg9C70LjRhtGPINCS0LjQsdC-0YDQt9GM0LrQsCwgODIsINCa0LjRl9Cy!5e0!3m2!1suk!2sua!4v1490277531428' frameborder='0' style='border:0' allowfullscreen='')
 				.footer-absolute
