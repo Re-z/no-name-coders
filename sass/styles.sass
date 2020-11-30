@@ -17,8 +17,7 @@ $primary: #5A7DF9
     &::selection
         background: #7198FF
         color: white
-html
-    scroll-behavior: smooth
+
 
 body
     padding-top: 120px
@@ -28,6 +27,8 @@ body
     font-size: 16px
     overflow-x: hidden
     font-family: 'Montserrat', sans-serif
+    +r($t)
+      padding-top: 70px !important
     +r($m)
       font-size: 14px
 a
@@ -55,6 +56,8 @@ button
     color: inherit
     transition: .25s
     text-align: center
+    &:active
+      transform: scale(.95)
 
 .inner
     width: 1100px
@@ -81,12 +84,6 @@ button
   margin: 0 auto
   position: relative
   +r($d)
-    width: 100%
-
-@keyframes animateWidth
-  from
-    width: 0
-  to
     width: 100%
 
 .header
@@ -171,13 +168,14 @@ button
       height: 2px
       background: $primary
       width: 0
+      opacity: 0
       +r($t)
         display: none
-    &:hover
+    &:hover, &.is-active
       color: $white
       &:after
         width: 100%
-        animation: animateWidth, 1s, linear
+        opacity: 1
       +r($t)
         font-weight: bold
         background: $primary
@@ -335,6 +333,8 @@ button
       box-shadow: 0px 0px 60px rgba(90, 125, 249, 0.6)
       strong,p
         color: $black
+      path
+        fill: $primary
      
   &__dots
     &_left
@@ -456,6 +456,8 @@ button
           background: $primary
           color: $white
           box-shadow: 0px 21px 50px rgba(90, 125, 249, 0.3)
+          path
+            fill: $white
   &__item
    
     &-img
@@ -543,7 +545,7 @@ button
     font-size: 12px
     padding: 2px 6px
 
-@keyframes rotation //need?
+@keyframes rotation
   from
     transform: rotate(0)
   to
@@ -978,7 +980,6 @@ input,textarea
     +r($t)
       margin-top: 20px
 
-
 .alert
   background: #19192E
   border-radius: 20px
@@ -1008,12 +1009,11 @@ input,textarea
 .no-scroll
   overflow: hidden !important
   //generate svg icons with classes
-$svg-icons: ['speed' 44px 50px, 'quality' 52px 52px, 'approach' 70px 48px, 'team' 50px 46px, 'tech' 30px 50px, 'envelope' 25px 20px, 'map-point' 19px 25px, 'phone' 25px 25px, 'cancel' 40px 20px]
+$svg-icons: ['envelope' 25px 20px, 'map-point' 19px 25px, 'phone' 25px 25px, 'cancel' 40px 20px]
 
 
 @each $name, $width, $height in $svg-icons
     .icon-#{$name}
-      
         width: $width
         height: $height
 
@@ -1031,6 +1031,7 @@ $svg-icons: ['speed' 44px 50px, 'quality' 52px 52px, 'approach' 70px 48px, 'team
     width: 15px
     height: 15px
     left: 0px
+    opacity: .7
     top: 0px
     background-image: url('../img/moving-cross.svg')
     background-size: cover

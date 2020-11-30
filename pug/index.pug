@@ -7,6 +7,8 @@ html
 		meta(name="description" content="")
 		meta(name="viewport" content="width=device-width, initial-scale=1")
 		link(rel='preconnect' href='https://fonts.gstatic.com')
+		link(rel='preconnect' href='https://cdnjs.cloudflare.com')
+		link(rel='preconnect' href='https://www.google.com/maps')
 		link(href='https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap' rel='stylesheet')
 		link(rel="stylesheet" href="css/fullpage.css")
 		link(rel="stylesheet" href="css/slick.css")
@@ -16,18 +18,17 @@ html
 		include includes/_mixins.pug
 		.animated-elements-container
 		#fullpage.fullpage-wrap
-			include _header.pug
 
-			section.section.intro#intro
+
+			+header('mainPage')
+			section.section.intro
 				.container
 					h1.intro__title.animate__animated.animate__fadeInUp make your work <span class="intro__title-span"> easier</span>
 					p.intro__text.animate__animated.animate__fadeInUp.animate__delay-1  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus volutpat in blandit blandit ac. Lectus metus non aliquet pellentesque. Sit porttitor ut elementum massa fringilla mauris. Fames amet in venenatis lectus in eleifend.
-					a(href="#").link.intro__btn.animate__animated.animate__fadeInUp.animate__delay-2  Learn more
+					a(href="#about-us").link.intro__btn.animate__animated.animate__fadeInUp.animate__delay-2  Learn more
 
 				+elipce('intro__elipce')
-			
-			section.section.about#about
-				
+			section.section.about
 				.container.about__box
 					.about__left.animate__animated
 						h2.section-title About us
@@ -35,18 +36,39 @@ html
 						p Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed corporis impedit asperiores quasi cum vero doloremque eius distinctio voluptate dolore reprehenderit excepturi magnam animi nulla consequatur reiciendis debitis harum dolor, explicabo provident molestiae! Molestiae ullam voluptatibus impedit earum quasi, sequi eaque iste totam, nobis possimus recusandae neque hic veritatis optio?
 						p Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed corporis impedit asperiores quasi cum vero doloremque eius distinctio voluptate dolore reprehenderit excepturi magnam animi nulla consequatur reiciendis debitis harum dolor, explicabo provident molestiae! Molestiae ullam voluptatibus impedit earum quasi, sequi eaque iste totam, nobis possimus recusandae neque hic veritatis optio?
 					.about__right.animate__animated
-						mixin aboutItem(icon, title, text)
-							.about__item
-								svg(class="icon-"+icon): use(xlink:href="#"+icon)
-								strong=title
-								p=text
-						+aboutItem('speed', 'Speed', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta, voluptas?')
-						+aboutItem('quality', 'Quality', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta, voluptas?')
-						+aboutItem('approach', 'Individual approach', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta, voluptas?')
-						+aboutItem('team', 'Dedicated team', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta, voluptas?')
-						+aboutItem('tech', 'New Technologies', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta, voluptas?')
-						+aboutItem('speed', 'Speed', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta, voluptas?')
-				
+						
+						.about__item
+							svg(width='45' height='50' viewbox='0 0 45 50' fill='none' xmlns='http://www.w3.org/2000/svg')
+								path(d='M44.1176 14.7044C44.1176 10.6504 40.8194 7.35221 36.7654 7.35221C35.2971 7.35221 33.8801 7.78864 32.6773 8.59503C29.8817 7.05548 26.7747 6.14321 23.5315 5.93118V2.94088H26.4723V0H17.6497V2.94088H20.5906V5.93118C17.3473 6.14321 14.2403 7.05557 11.4447 8.59503C10.2418 7.78864 8.82487 7.35221 7.35659 7.35221C3.30258 7.35221 0.00437868 10.6504 0.00437868 14.7044C0.00437868 16.4325 0.616181 18.0948 1.70901 19.4075C-1.61683 27.3404 -0.118256 36.9519 6.46462 43.5348C15.0844 52.1545 29.0365 52.1556 37.6574 43.5348C41.8233 39.3688 44.1176 33.83 44.1176 27.9384C44.1176 24.9607 43.5306 22.0733 42.413 19.4075C43.5058 18.0948 44.1176 16.4325 44.1176 14.7044ZM22.061 44.1133C13.1422 44.1133 5.88615 36.8572 5.88615 27.9384C5.88615 19.0196 13.1422 11.7635 22.061 11.7635C30.9798 11.7635 38.2359 19.0196 38.2359 27.9384C38.2359 36.8572 30.9798 44.1133 22.061 44.1133Z' fill='#8C8CA6')
+								path(d='M35.2134 26.4685C34.9303 23.9198 33.9208 21.5874 32.3967 19.6833L30.3795 21.7003L28.3 19.6208L30.3171 17.6038C28.4131 16.0797 26.0806 15.0701 23.5319 14.7871V17.6458H20.591V14.7871C18.0422 15.0701 15.7098 16.0797 13.8058 17.6038L15.8229 19.6209L13.7434 21.7004L11.7263 19.6833C10.2022 21.5874 9.19262 23.9198 8.90961 26.4685H11.7683V29.4094H8.90961C9.19262 31.9582 10.2022 34.2906 11.7263 36.1946L13.7433 34.1775L15.8228 36.257L13.8058 38.2741C15.7098 39.7983 18.0422 40.8078 20.591 41.0908V38.232H23.5319V41.0908C26.0806 40.8077 28.4131 39.7982 30.3171 38.2741L28.3 36.257L30.3795 34.1775L32.3966 36.1946C33.9208 34.2906 34.9303 31.9582 35.2134 29.4094H32.3546V26.4685H35.2134ZM29.4137 29.4094H20.5911V20.5867H23.532V26.4685H29.4137V29.4094Z' fill='#8C8CA6')
+							strong Speed 
+							p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta, voluptas?
+						.about__item
+							svg(width='52' height='52' viewbox='0 0 52 52' fill='none' xmlns='http://www.w3.org/2000/svg')
+								path(d='M49.9125 23.6644C50.3935 23.1769 50.7341 22.5585 50.8955 21.8793C51.057 21.2001 51.0329 20.4872 50.826 19.8216C50.6191 19.1559 50.2376 18.5641 49.7248 18.1133C49.2121 17.6624 48.5885 17.3706 47.925 17.2709L35.825 15.4441C35.5599 15.4137 35.3064 15.3141 35.0879 15.1545C34.8695 14.9949 34.693 14.7804 34.575 14.5308L29.2125 3.08766C28.9186 2.45954 28.4617 1.93018 27.8937 1.5599C27.3258 1.18961 26.6696 0.993286 26 0.993286C25.3303 0.993286 24.6741 1.18961 24.1062 1.5599C23.5382 1.93018 23.0813 2.45954 22.7875 3.08766L17.375 14.5308C17.2569 14.7804 17.0804 14.9949 16.862 15.1545C16.6435 15.3141 16.39 15.4137 16.125 15.4441L4.02495 17.2709C3.36137 17.3706 2.73784 17.6624 2.22508 18.1133C1.71232 18.5641 1.33084 19.1559 1.12392 19.8216C0.91699 20.4872 0.892895 21.2001 1.05436 21.8793C1.21583 22.5585 1.5564 23.1769 2.03745 23.6644L10.7875 32.5762C10.9681 32.7651 11.1031 32.9961 11.1813 33.2502C11.2596 33.5043 11.2788 33.7742 11.2375 34.0376L9.23745 46.668C9.14152 47.203 9.16132 47.7537 9.2954 48.2797C9.42949 48.8057 9.67448 49.2937 10.0125 49.7082C10.544 50.358 11.27 50.8016 12.073 50.9673C12.8759 51.1331 13.709 51.0112 14.4375 50.6216L25.2625 44.6717C25.4915 44.5523 25.744 44.4901 26 44.4901C26.256 44.4901 26.5084 44.5523 26.7375 44.6717L37.5625 50.5824C38.2888 50.9816 39.1244 51.1087 39.9297 50.9425C40.735 50.7763 41.4613 50.3268 41.9875 49.6691C42.3201 49.2591 42.562 48.7776 42.6959 48.2589C42.8299 47.7402 42.8526 47.197 42.7625 46.668L40.7 34.0897C40.6586 33.8264 40.6778 33.5565 40.7561 33.3024C40.8343 33.0483 40.9693 32.8173 41.15 32.6284L49.9125 23.6644Z' fill='#8B8BA6')
+							strong Quality 
+							p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta, voluptas?
+						.about__item
+							svg(width='70' height='48' viewbox='0 0 70 48' fill='none' xmlns='http://www.w3.org/2000/svg')
+								path(d='M67.2458 15.2572C67.2565 15.4498 67.2424 15.6458 67.194 15.8405L62.8762 33.1115C62.6585 33.9816 61.8787 34.5934 60.9822 34.5981L35.0756 34.729C35.0722 34.729 35.0691 34.729 35.0657 34.729H9.15888C8.25764 34.729 7.47234 34.1151 7.25462 33.2405L2.93686 15.9041C2.88714 15.7042 2.87275 15.5027 2.88531 15.3051C1.21499 14.7789 0 13.2158 0 11.3738C0 9.10113 1.84878 7.25235 4.1215 7.25235C6.39421 7.25235 8.24299 9.10113 8.24299 11.3738C8.24299 12.6537 7.65656 13.7989 6.73832 14.5554L12.1441 20.002C13.5104 21.3787 15.4063 22.168 17.3459 22.168C19.6393 22.168 21.8259 21.0789 23.2028 19.2541L32.087 7.48263C31.3406 6.73683 30.8785 5.70633 30.8785 4.5701C30.8785 2.29739 32.7273 0.448608 35 0.448608C37.2727 0.448608 39.1215 2.29739 39.1215 4.5701C39.1215 5.67231 38.684 6.67272 37.9766 7.41302C37.979 7.41616 37.9819 7.41878 37.9842 7.42218L46.804 19.2261C48.1804 21.0684 50.3749 22.1682 52.6748 22.1682C54.6322 22.1682 56.4729 21.406 57.8569 20.0217L63.2967 14.5818C62.3591 13.8255 61.757 12.6694 61.757 11.3738C61.757 9.10113 63.6058 7.25235 65.8785 7.25235C68.1512 7.25235 70 9.10113 70 11.3738C70 13.1666 68.8473 14.6914 67.2458 15.2572ZM62.4549 40.8785C62.4549 39.7946 61.5762 38.9159 60.4923 38.9159H9.72594C8.64206 38.9159 7.76333 39.7946 7.76333 40.8785V45.5888C7.76333 46.6727 8.64206 47.5514 9.72594 47.5514H60.4923C61.5762 47.5514 62.4549 46.6727 62.4549 45.5888V40.8785Z' fill='#8B8BA6')
+							strong Individual approach 
+							p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta, voluptas?
+						.about__item
+							svg(width='50' height='46' viewbox='0 0 50 46' fill='none' xmlns='http://www.w3.org/2000/svg')
+								path(d='M24.9999 46L21.4999 42.5C8.49994 31 -6.10352e-05 23.25 -6.10352e-05 13.75C-6.10352e-05 6 5.99994 0 13.7499 0C17.9999 0 22.2499 2 24.9999 5.25C27.7499 2 31.9999 0 36.2499 0C43.9999 0 49.9999 6 49.9999 13.75C49.9999 23.25 41.4999 31 28.4999 42.5L24.9999 46Z' fill='#8B8BA6')
+							strong Dedicated team
+							p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta, voluptas?
+						.about__item
+							svg(width='30' height='50' viewbox='0 0 30 50' fill='none' xmlns='http://www.w3.org/2000/svg')
+								path(d='M29.0886 17.1483C28.952 16.855 28.6577 16.6667 28.3336 16.6667H18.4586L28.2044 1.2792C28.3669 1.02256 28.3769 0.697559 28.2303 0.431738C28.0836 0.165039 27.8035 0 27.5002 0H14.1669C13.8511 0 13.5627 0.17832 13.4211 0.46084L0.921124 25.4608C0.791925 25.7184 0.806085 26.025 0.957745 26.2708C1.11028 26.5166 1.37776 26.6666 1.66692 26.6666H10.2361L0.898565 48.8433C0.739385 49.2225 0.881085 49.6624 1.23187 49.8774C1.36683 49.96 1.51683 49.9999 1.66605 49.9999C1.90521 49.9999 2.14105 49.8974 2.30442 49.7041L28.9711 18.0374C29.1802 17.7892 29.2252 17.4425 29.0886 17.1483Z' fill='#8B8BA6')
+							strong New Technologies
+							p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta, voluptas?
+						.about__item
+							svg(width='45' height='50' viewbox='0 0 45 50' fill='none' xmlns='http://www.w3.org/2000/svg')
+								path(d='M44.1176 14.7044C44.1176 10.6504 40.8194 7.35221 36.7654 7.35221C35.2971 7.35221 33.8801 7.78864 32.6773 8.59503C29.8817 7.05548 26.7747 6.14321 23.5315 5.93118V2.94088H26.4723V0H17.6497V2.94088H20.5906V5.93118C17.3473 6.14321 14.2403 7.05557 11.4447 8.59503C10.2418 7.78864 8.82487 7.35221 7.35659 7.35221C3.30258 7.35221 0.00437868 10.6504 0.00437868 14.7044C0.00437868 16.4325 0.616181 18.0948 1.70901 19.4075C-1.61683 27.3404 -0.118256 36.9519 6.46462 43.5348C15.0844 52.1545 29.0365 52.1556 37.6574 43.5348C41.8233 39.3688 44.1176 33.83 44.1176 27.9384C44.1176 24.9607 43.5306 22.0733 42.413 19.4075C43.5058 18.0948 44.1176 16.4325 44.1176 14.7044ZM22.061 44.1133C13.1422 44.1133 5.88615 36.8572 5.88615 27.9384C5.88615 19.0196 13.1422 11.7635 22.061 11.7635C30.9798 11.7635 38.2359 19.0196 38.2359 27.9384C38.2359 36.8572 30.9798 44.1133 22.061 44.1133Z' fill='#8C8CA6')
+								path(d='M35.2134 26.4685C34.9303 23.9198 33.9208 21.5874 32.3967 19.6833L30.3795 21.7003L28.3 19.6208L30.3171 17.6038C28.4131 16.0797 26.0806 15.0701 23.5319 14.7871V17.6458H20.591V14.7871C18.0422 15.0701 15.7098 16.0797 13.8058 17.6038L15.8229 19.6209L13.7434 21.7004L11.7263 19.6833C10.2022 21.5874 9.19262 23.9198 8.90961 26.4685H11.7683V29.4094H8.90961C9.19262 31.9582 10.2022 34.2906 11.7263 36.1946L13.7433 34.1775L15.8228 36.257L13.8058 38.2741C15.7098 39.7983 18.0422 40.8078 20.591 41.0908V38.232H23.5319V41.0908C26.0806 40.8077 28.4131 39.7982 30.3171 38.2741L28.3 36.257L30.3795 34.1775L32.3966 36.1946C33.9208 34.2906 34.9303 31.9582 35.2134 29.4094H32.3546V26.4685H35.2134ZM29.4137 29.4094H20.5911V20.5867H23.532V26.4685H29.4137V29.4094Z' fill='#8C8CA6')
+							strong Speed 
+							p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta, voluptas?
 
 				+dots('about__dots about__dots_left')
 				+dots('about__dots about__dots_right')
@@ -81,8 +103,14 @@ html
 							h2.section-title Our cases
 							p Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt neque explicabo quae dignissimos, atque ab eius nisi unde dolores? Impedit suscipit dignissimos similique eius omnis ratione animi perferendis deleniti nesciunt?
 							.cases__slider-btns
-								button#cases-slider-prev <
-								button#cases-slider-next >
+								button#cases-slider-prev
+									svg(width='11' height='18' viewbox='0 0 11 18' fill='none' xmlns='http://www.w3.org/2000/svg')
+										path(d='M1.1085 9.89109L8.84821 17.6306C9.34055 18.1231 10.1388 18.1231 10.6309 17.6306C11.123 17.1384 11.123 16.3402 10.6309 15.8481L3.78244 8.99987L10.6307 2.15186C11.1228 1.65952 11.1228 0.861395 10.6307 0.369254C10.1386 -0.123085 9.34035 -0.123085 8.84801 0.369254L1.1083 8.10885C0.862229 8.35504 0.739334 8.67735 0.739334 8.99983C0.739334 9.32247 0.862469 9.64502 1.1085 9.89109Z' fill='black')
+
+								button#cases-slider-next
+									svg(width='11' height='18' viewbox='0 0 11 18' fill='none' xmlns='http://www.w3.org/2000/svg')
+										path(d='M9.8915 9.89109L2.15179 17.6306C1.65945 18.1231 0.861205 18.1231 0.369105 17.6306C-0.123035 17.1384 -0.123035 16.3402 0.369105 15.8481L7.21756 8.99987L0.369304 2.15186C-0.122836 1.65952 -0.122836 0.861395 0.369304 0.369254C0.861444 -0.123085 1.65965 -0.123085 2.15199 0.369254L9.8917 8.10885C10.1378 8.35504 10.2607 8.67735 10.2607 8.99983C10.2607 9.32247 10.1375 9.64502 9.8915 9.89109Z' fill='black')
+
 						.cases__right.animate__animated
 							mixin casesItem
 								.cases__item
@@ -95,7 +123,7 @@ html
 											span.chip HTML
 											span.chip React.js
 										p.cases__item-text Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos nostrum repellat nulla. Ex cupiditate voluptates veniam, corporis consectetur sapiente expedita necessitatibus, mollitia ipsa, voluptatem eius alias optio! Vero qui neque dicta tempora totam debitis quidem! Nostrum, eveniet accusantium aliquid dolores labore distinctio cupiditate magni quas, aliquam atque repellendus sint. Voluptas!
-										a.cases__item-link.link(href="#") See Details
+										a.cases__item-link.link(href="project.html") See Details
 				
 							#cases-slider.cases__slider
 								+casesItem
@@ -117,15 +145,15 @@ html
 			
 
 			section.section.career
-				.container.career__container
-					h2.section-title.career__title.animate__animated Career
-					p.career__text.animate__delay-1.animate__animated Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, ullam porro harum provident blanditiis maiores, excepturi perspiciatis dolorem deserunt aut culpa debitis sed iusto reiciendis voluptatibus asperiores ab quo dicta. Laborum iure nihil ullam pariatur. Ab, id vitae debitis quibusdam eos facere temporibus nisi laboriosam dolor, quidem illo similique eveniet?
-					.career__box.animate__delay-2.animate__animated
+				.container.career__container.animate__animated
+					h2.section-title.career__title Career
+					p.career__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, ullam porro harum provident blanditiis maiores, excepturi perspiciatis dolorem deserunt aut culpa debitis sed iusto reiciendis voluptatibus asperiores ab quo dicta. Laborum iure nihil ullam pariatur. Ab, id vitae debitis quibusdam eos facere temporibus nisi laboriosam dolor, quidem illo similique eveniet?
+					.career__box
 						.career__item
 							small.career__item-number No.1
 							strong.career__item-title UI/UX Designer
 							p.career__item-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eveniet dolore natus distinctio quod? Qui, minima! Ea facere minus eveniet amet! Vel perspiciatis aliquid qui saepe, id, voluptas unde voluptatibus enim ea tempora dolores? Saepe eaque nobis voluptatem hic rem tempore quos beatae, id aperiam, quasi recusandae consequatur nemo aut.
-							a.btn.btn_wide.career__item-btn(href="#") Learn more
+							a.btn.btn_wide.career__item-btn(href="vacancy.html") Learn more
 				.career__bg
 				+dots('career__dots')
 			
@@ -157,6 +185,4 @@ html
 		script(src="js/slick.min.js")
 
 		script(src="js/app.js")
-		script.
-			//todo deal with svg icons on hover
-			//another slider arrow icons
+		

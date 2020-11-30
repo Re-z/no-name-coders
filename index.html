@@ -7,6 +7,8 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://www.google.com/maps">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/fullpage.css">
     <link rel="stylesheet" href="css/slick.css">
@@ -16,34 +18,34 @@
   <body>
     <div class="animated-elements-container"></div>
     <div class="fullpage-wrap" id="fullpage">
-      <header class="header">
-        <div class="container">
-          <div class="header__inner"><img class="header__logo" src="https://www.placecage.com/200/50">
-            <div class="header__burger"><span></span><span></span><span></span></div>
-            <nav class="header__menu">
-              <div class="header__menu-mob"><img class="header__logo-mob" src="https://www.placecage.com/200/50">
-                <div class="header__close">
-                  <svg class="icon-cancel">
-                    <use xlink:href="#cancel"></use>
-                  </svg>
-                </div>
+          <header class="header">
+            <div class="container">
+              <div class="header__inner"><img class="header__logo" src="https://www.placecage.com/200/50">
+                <div class="header__burger"><span></span><span></span><span></span></div>
+                <nav class="header__menu">
+                  <div class="header__menu-mob"><img class="header__logo-mob" src="https://www.placecage.com/200/50">
+                    <div class="header__close">
+                      <svg class="icon-cancel">
+                        <use xlink:href="#cancel"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="header__links"><a class="header__link" data-anchor="intro" href="#intro">Intro</a><a class="header__link" data-anchor="about-us" href="#about-us">About Us</a><a class="header__link" data-anchor="services" href="#services">Services</a><a class="header__link" data-anchor="cases" href="#cases">Our Cases</a><a class="header__link" data-anchor="technology" href="#technology">Technology</a><a class="header__link" data-anchor="career" href="#career">Career</a><a class="header__link" data-anchor="contacts-us" href="#contacts-us">Contact Us</a>
+                  </div>
+                  <div class="header__footer">
+                    <p>Copyright © 2020 Site-name.com All rights reserved. </p>
+                  </div>
+                </nav>
               </div>
-              <div class="header__links"><a class="header__link" href="#about-us">About Us</a><a class="header__link" href="#services">Services</a><a class="header__link" href="#cases">Our Cases</a><a class="header__link" href="#technology">Technology</a><a class="header__link" href="#career">Career</a><a class="header__link" href="#contacts">Contact Us</a>
-              </div>
-              <div class="header__footer">
-                <p>Copyright © 2020 Site-name.com All rights reserved. </p>
-              </div>
-            </nav>
-          </div>
-        </div>
-      </header>
-      <section class="section intro" id="intro">
+            </div>
+          </header>
+      <section class="section intro">
         <div class="container">
           <h1 class="intro__title animate__animated animate__fadeInUp">make your work <span class="intro__title-span"> easier</span></h1>
-          <p class="intro__text animate__animated animate__fadeInUp animate__delay-1"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus volutpat in blandit blandit ac. Lectus metus non aliquet pellentesque. Sit porttitor ut elementum massa fringilla mauris. Fames amet in venenatis lectus in eleifend.</p><a class="link intro__btn animate__animated animate__fadeInUp animate__delay-2" href="#"> Learn more</a>
+          <p class="intro__text animate__animated animate__fadeInUp animate__delay-1"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus volutpat in blandit blandit ac. Lectus metus non aliquet pellentesque. Sit porttitor ut elementum massa fringilla mauris. Fames amet in venenatis lectus in eleifend.</p><a class="link intro__btn animate__animated animate__fadeInUp animate__delay-2" href="#about-us"> Learn more</a>
         </div><img class="elipce intro__elipce" src="img/elipce.svg" alt="elipce">
       </section>
-      <section class="section about" id="about">
+      <section class="section about">
         <div class="container about__box">
           <div class="about__left animate__animated">
             <h2 class="section-title">About us</h2>
@@ -52,42 +54,44 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed corporis impedit asperiores quasi cum vero doloremque eius distinctio voluptate dolore reprehenderit excepturi magnam animi nulla consequatur reiciendis debitis harum dolor, explicabo provident molestiae! Molestiae ullam voluptatibus impedit earum quasi, sequi eaque iste totam, nobis possimus recusandae neque hic veritatis optio?</p>
           </div>
           <div class="about__right animate__animated">
-                        <div class="about__item">
-                          <svg class="icon-speed">
-                            <use xlink:href="#speed"></use>
-                          </svg><strong>Speed</strong>
-                          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta, voluptas?</p>
-                        </div>
-                        <div class="about__item">
-                          <svg class="icon-quality">
-                            <use xlink:href="#quality"></use>
-                          </svg><strong>Quality</strong>
-                          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta, voluptas?</p>
-                        </div>
-                        <div class="about__item">
-                          <svg class="icon-approach">
-                            <use xlink:href="#approach"></use>
-                          </svg><strong>Individual approach</strong>
-                          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta, voluptas?</p>
-                        </div>
-                        <div class="about__item">
-                          <svg class="icon-team">
-                            <use xlink:href="#team"></use>
-                          </svg><strong>Dedicated team</strong>
-                          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta, voluptas?</p>
-                        </div>
-                        <div class="about__item">
-                          <svg class="icon-tech">
-                            <use xlink:href="#tech"></use>
-                          </svg><strong>New Technologies</strong>
-                          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta, voluptas?</p>
-                        </div>
-                        <div class="about__item">
-                          <svg class="icon-speed">
-                            <use xlink:href="#speed"></use>
-                          </svg><strong>Speed</strong>
-                          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta, voluptas?</p>
-                        </div>
+            <div class="about__item">
+              <svg width="45" height="50" viewbox="0 0 45 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M44.1176 14.7044C44.1176 10.6504 40.8194 7.35221 36.7654 7.35221C35.2971 7.35221 33.8801 7.78864 32.6773 8.59503C29.8817 7.05548 26.7747 6.14321 23.5315 5.93118V2.94088H26.4723V0H17.6497V2.94088H20.5906V5.93118C17.3473 6.14321 14.2403 7.05557 11.4447 8.59503C10.2418 7.78864 8.82487 7.35221 7.35659 7.35221C3.30258 7.35221 0.00437868 10.6504 0.00437868 14.7044C0.00437868 16.4325 0.616181 18.0948 1.70901 19.4075C-1.61683 27.3404 -0.118256 36.9519 6.46462 43.5348C15.0844 52.1545 29.0365 52.1556 37.6574 43.5348C41.8233 39.3688 44.1176 33.83 44.1176 27.9384C44.1176 24.9607 43.5306 22.0733 42.413 19.4075C43.5058 18.0948 44.1176 16.4325 44.1176 14.7044ZM22.061 44.1133C13.1422 44.1133 5.88615 36.8572 5.88615 27.9384C5.88615 19.0196 13.1422 11.7635 22.061 11.7635C30.9798 11.7635 38.2359 19.0196 38.2359 27.9384C38.2359 36.8572 30.9798 44.1133 22.061 44.1133Z" fill="#8C8CA6"></path>
+                <path d="M35.2134 26.4685C34.9303 23.9198 33.9208 21.5874 32.3967 19.6833L30.3795 21.7003L28.3 19.6208L30.3171 17.6038C28.4131 16.0797 26.0806 15.0701 23.5319 14.7871V17.6458H20.591V14.7871C18.0422 15.0701 15.7098 16.0797 13.8058 17.6038L15.8229 19.6209L13.7434 21.7004L11.7263 19.6833C10.2022 21.5874 9.19262 23.9198 8.90961 26.4685H11.7683V29.4094H8.90961C9.19262 31.9582 10.2022 34.2906 11.7263 36.1946L13.7433 34.1775L15.8228 36.257L13.8058 38.2741C15.7098 39.7983 18.0422 40.8078 20.591 41.0908V38.232H23.5319V41.0908C26.0806 40.8077 28.4131 39.7982 30.3171 38.2741L28.3 36.257L30.3795 34.1775L32.3966 36.1946C33.9208 34.2906 34.9303 31.9582 35.2134 29.4094H32.3546V26.4685H35.2134ZM29.4137 29.4094H20.5911V20.5867H23.532V26.4685H29.4137V29.4094Z" fill="#8C8CA6"></path>
+              </svg><strong>Speed </strong>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta, voluptas?</p>
+            </div>
+            <div class="about__item">
+              <svg width="52" height="52" viewbox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M49.9125 23.6644C50.3935 23.1769 50.7341 22.5585 50.8955 21.8793C51.057 21.2001 51.0329 20.4872 50.826 19.8216C50.6191 19.1559 50.2376 18.5641 49.7248 18.1133C49.2121 17.6624 48.5885 17.3706 47.925 17.2709L35.825 15.4441C35.5599 15.4137 35.3064 15.3141 35.0879 15.1545C34.8695 14.9949 34.693 14.7804 34.575 14.5308L29.2125 3.08766C28.9186 2.45954 28.4617 1.93018 27.8937 1.5599C27.3258 1.18961 26.6696 0.993286 26 0.993286C25.3303 0.993286 24.6741 1.18961 24.1062 1.5599C23.5382 1.93018 23.0813 2.45954 22.7875 3.08766L17.375 14.5308C17.2569 14.7804 17.0804 14.9949 16.862 15.1545C16.6435 15.3141 16.39 15.4137 16.125 15.4441L4.02495 17.2709C3.36137 17.3706 2.73784 17.6624 2.22508 18.1133C1.71232 18.5641 1.33084 19.1559 1.12392 19.8216C0.91699 20.4872 0.892895 21.2001 1.05436 21.8793C1.21583 22.5585 1.5564 23.1769 2.03745 23.6644L10.7875 32.5762C10.9681 32.7651 11.1031 32.9961 11.1813 33.2502C11.2596 33.5043 11.2788 33.7742 11.2375 34.0376L9.23745 46.668C9.14152 47.203 9.16132 47.7537 9.2954 48.2797C9.42949 48.8057 9.67448 49.2937 10.0125 49.7082C10.544 50.358 11.27 50.8016 12.073 50.9673C12.8759 51.1331 13.709 51.0112 14.4375 50.6216L25.2625 44.6717C25.4915 44.5523 25.744 44.4901 26 44.4901C26.256 44.4901 26.5084 44.5523 26.7375 44.6717L37.5625 50.5824C38.2888 50.9816 39.1244 51.1087 39.9297 50.9425C40.735 50.7763 41.4613 50.3268 41.9875 49.6691C42.3201 49.2591 42.562 48.7776 42.6959 48.2589C42.8299 47.7402 42.8526 47.197 42.7625 46.668L40.7 34.0897C40.6586 33.8264 40.6778 33.5565 40.7561 33.3024C40.8343 33.0483 40.9693 32.8173 41.15 32.6284L49.9125 23.6644Z" fill="#8B8BA6"></path>
+              </svg><strong>Quality </strong>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta, voluptas?</p>
+            </div>
+            <div class="about__item">
+              <svg width="70" height="48" viewbox="0 0 70 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M67.2458 15.2572C67.2565 15.4498 67.2424 15.6458 67.194 15.8405L62.8762 33.1115C62.6585 33.9816 61.8787 34.5934 60.9822 34.5981L35.0756 34.729C35.0722 34.729 35.0691 34.729 35.0657 34.729H9.15888C8.25764 34.729 7.47234 34.1151 7.25462 33.2405L2.93686 15.9041C2.88714 15.7042 2.87275 15.5027 2.88531 15.3051C1.21499 14.7789 0 13.2158 0 11.3738C0 9.10113 1.84878 7.25235 4.1215 7.25235C6.39421 7.25235 8.24299 9.10113 8.24299 11.3738C8.24299 12.6537 7.65656 13.7989 6.73832 14.5554L12.1441 20.002C13.5104 21.3787 15.4063 22.168 17.3459 22.168C19.6393 22.168 21.8259 21.0789 23.2028 19.2541L32.087 7.48263C31.3406 6.73683 30.8785 5.70633 30.8785 4.5701C30.8785 2.29739 32.7273 0.448608 35 0.448608C37.2727 0.448608 39.1215 2.29739 39.1215 4.5701C39.1215 5.67231 38.684 6.67272 37.9766 7.41302C37.979 7.41616 37.9819 7.41878 37.9842 7.42218L46.804 19.2261C48.1804 21.0684 50.3749 22.1682 52.6748 22.1682C54.6322 22.1682 56.4729 21.406 57.8569 20.0217L63.2967 14.5818C62.3591 13.8255 61.757 12.6694 61.757 11.3738C61.757 9.10113 63.6058 7.25235 65.8785 7.25235C68.1512 7.25235 70 9.10113 70 11.3738C70 13.1666 68.8473 14.6914 67.2458 15.2572ZM62.4549 40.8785C62.4549 39.7946 61.5762 38.9159 60.4923 38.9159H9.72594C8.64206 38.9159 7.76333 39.7946 7.76333 40.8785V45.5888C7.76333 46.6727 8.64206 47.5514 9.72594 47.5514H60.4923C61.5762 47.5514 62.4549 46.6727 62.4549 45.5888V40.8785Z" fill="#8B8BA6"></path>
+              </svg><strong>Individual approach </strong>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta, voluptas?</p>
+            </div>
+            <div class="about__item">
+              <svg width="50" height="46" viewbox="0 0 50 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M24.9999 46L21.4999 42.5C8.49994 31 -6.10352e-05 23.25 -6.10352e-05 13.75C-6.10352e-05 6 5.99994 0 13.7499 0C17.9999 0 22.2499 2 24.9999 5.25C27.7499 2 31.9999 0 36.2499 0C43.9999 0 49.9999 6 49.9999 13.75C49.9999 23.25 41.4999 31 28.4999 42.5L24.9999 46Z" fill="#8B8BA6"></path>
+              </svg><strong>Dedicated team</strong>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta, voluptas?</p>
+            </div>
+            <div class="about__item">
+              <svg width="30" height="50" viewbox="0 0 30 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M29.0886 17.1483C28.952 16.855 28.6577 16.6667 28.3336 16.6667H18.4586L28.2044 1.2792C28.3669 1.02256 28.3769 0.697559 28.2303 0.431738C28.0836 0.165039 27.8035 0 27.5002 0H14.1669C13.8511 0 13.5627 0.17832 13.4211 0.46084L0.921124 25.4608C0.791925 25.7184 0.806085 26.025 0.957745 26.2708C1.11028 26.5166 1.37776 26.6666 1.66692 26.6666H10.2361L0.898565 48.8433C0.739385 49.2225 0.881085 49.6624 1.23187 49.8774C1.36683 49.96 1.51683 49.9999 1.66605 49.9999C1.90521 49.9999 2.14105 49.8974 2.30442 49.7041L28.9711 18.0374C29.1802 17.7892 29.2252 17.4425 29.0886 17.1483Z" fill="#8B8BA6"></path>
+              </svg><strong>New Technologies</strong>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta, voluptas?</p>
+            </div>
+            <div class="about__item">
+              <svg width="45" height="50" viewbox="0 0 45 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M44.1176 14.7044C44.1176 10.6504 40.8194 7.35221 36.7654 7.35221C35.2971 7.35221 33.8801 7.78864 32.6773 8.59503C29.8817 7.05548 26.7747 6.14321 23.5315 5.93118V2.94088H26.4723V0H17.6497V2.94088H20.5906V5.93118C17.3473 6.14321 14.2403 7.05557 11.4447 8.59503C10.2418 7.78864 8.82487 7.35221 7.35659 7.35221C3.30258 7.35221 0.00437868 10.6504 0.00437868 14.7044C0.00437868 16.4325 0.616181 18.0948 1.70901 19.4075C-1.61683 27.3404 -0.118256 36.9519 6.46462 43.5348C15.0844 52.1545 29.0365 52.1556 37.6574 43.5348C41.8233 39.3688 44.1176 33.83 44.1176 27.9384C44.1176 24.9607 43.5306 22.0733 42.413 19.4075C43.5058 18.0948 44.1176 16.4325 44.1176 14.7044ZM22.061 44.1133C13.1422 44.1133 5.88615 36.8572 5.88615 27.9384C5.88615 19.0196 13.1422 11.7635 22.061 11.7635C30.9798 11.7635 38.2359 19.0196 38.2359 27.9384C38.2359 36.8572 30.9798 44.1133 22.061 44.1133Z" fill="#8C8CA6"></path>
+                <path d="M35.2134 26.4685C34.9303 23.9198 33.9208 21.5874 32.3967 19.6833L30.3795 21.7003L28.3 19.6208L30.3171 17.6038C28.4131 16.0797 26.0806 15.0701 23.5319 14.7871V17.6458H20.591V14.7871C18.0422 15.0701 15.7098 16.0797 13.8058 17.6038L15.8229 19.6209L13.7434 21.7004L11.7263 19.6833C10.2022 21.5874 9.19262 23.9198 8.90961 26.4685H11.7683V29.4094H8.90961C9.19262 31.9582 10.2022 34.2906 11.7263 36.1946L13.7433 34.1775L15.8228 36.257L13.8058 38.2741C15.7098 39.7983 18.0422 40.8078 20.591 41.0908V38.232H23.5319V41.0908C26.0806 40.8077 28.4131 39.7982 30.3171 38.2741L28.3 36.257L30.3795 34.1775L32.3966 36.1946C33.9208 34.2906 34.9303 31.9582 35.2134 29.4094H32.3546V26.4685H35.2134ZM29.4137 29.4094H20.5911V20.5867H23.532V26.4685H29.4137V29.4094Z" fill="#8C8CA6"></path>
+              </svg><strong>Speed </strong>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta, voluptas?</p>
+            </div>
           </div>
         </div><img class="dots about__dots about__dots_left" src="img/dots.svg" alt="dots"><img class="dots about__dots about__dots_right" src="img/dots.svg" alt="dots">
       </section>
@@ -129,8 +133,16 @@
               <h2 class="section-title">Our cases</h2>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt neque explicabo quae dignissimos, atque ab eius nisi unde dolores? Impedit suscipit dignissimos similique eius omnis ratione animi perferendis deleniti nesciunt?</p>
               <div class="cases__slider-btns">
-                <button id="cases-slider-prev"><</button>
-                <button id="cases-slider-next">></button>
+                <button id="cases-slider-prev">
+                  <svg width="11" height="18" viewbox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.1085 9.89109L8.84821 17.6306C9.34055 18.1231 10.1388 18.1231 10.6309 17.6306C11.123 17.1384 11.123 16.3402 10.6309 15.8481L3.78244 8.99987L10.6307 2.15186C11.1228 1.65952 11.1228 0.861395 10.6307 0.369254C10.1386 -0.123085 9.34035 -0.123085 8.84801 0.369254L1.1083 8.10885C0.862229 8.35504 0.739334 8.67735 0.739334 8.99983C0.739334 9.32247 0.862469 9.64502 1.1085 9.89109Z" fill="black"></path>
+                  </svg>
+                </button>
+                <button id="cases-slider-next">
+                  <svg width="11" height="18" viewbox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.8915 9.89109L2.15179 17.6306C1.65945 18.1231 0.861205 18.1231 0.369105 17.6306C-0.123035 17.1384 -0.123035 16.3402 0.369105 15.8481L7.21756 8.99987L0.369304 2.15186C-0.122836 1.65952 -0.122836 0.861395 0.369304 0.369254C0.861444 -0.123085 1.65965 -0.123085 2.15199 0.369254L9.8917 8.10885C10.1378 8.35504 10.2607 8.67735 10.2607 8.99983C10.2607 9.32247 10.1375 9.64502 9.8915 9.89109Z" fill="black"></path>
+                  </svg>
+                </button>
               </div>
             </div>
             <div class="cases__right animate__animated">
@@ -139,28 +151,28 @@
                                 <div class="cases__item-box"><strong class="cases__item-title">The name of project</strong>
                                   <p class="cases__item-subtitle">Pablo Escobar | for 1 month</p>
                                   <div class="cases__item-chips"><span class="chip">CSS3</span><span class="chip">HTML</span><span class="chip">React.js</span></div>
-                                  <p class="cases__item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos nostrum repellat nulla. Ex cupiditate voluptates veniam, corporis consectetur sapiente expedita necessitatibus, mollitia ipsa, voluptatem eius alias optio! Vero qui neque dicta tempora totam debitis quidem! Nostrum, eveniet accusantium aliquid dolores labore distinctio cupiditate magni quas, aliquam atque repellendus sint. Voluptas!</p><a class="cases__item-link link" href="#">See Details</a>
+                                  <p class="cases__item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos nostrum repellat nulla. Ex cupiditate voluptates veniam, corporis consectetur sapiente expedita necessitatibus, mollitia ipsa, voluptatem eius alias optio! Vero qui neque dicta tempora totam debitis quidem! Nostrum, eveniet accusantium aliquid dolores labore distinctio cupiditate magni quas, aliquam atque repellendus sint. Voluptas!</p><a class="cases__item-link link" href="project.html">See Details</a>
                                 </div>
                               </div>
                               <div class="cases__item"><img class="cases__item-img" src="img/slider-item.jpg">
                                 <div class="cases__item-box"><strong class="cases__item-title">The name of project</strong>
                                   <p class="cases__item-subtitle">Pablo Escobar | for 1 month</p>
                                   <div class="cases__item-chips"><span class="chip">CSS3</span><span class="chip">HTML</span><span class="chip">React.js</span></div>
-                                  <p class="cases__item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos nostrum repellat nulla. Ex cupiditate voluptates veniam, corporis consectetur sapiente expedita necessitatibus, mollitia ipsa, voluptatem eius alias optio! Vero qui neque dicta tempora totam debitis quidem! Nostrum, eveniet accusantium aliquid dolores labore distinctio cupiditate magni quas, aliquam atque repellendus sint. Voluptas!</p><a class="cases__item-link link" href="#">See Details</a>
+                                  <p class="cases__item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos nostrum repellat nulla. Ex cupiditate voluptates veniam, corporis consectetur sapiente expedita necessitatibus, mollitia ipsa, voluptatem eius alias optio! Vero qui neque dicta tempora totam debitis quidem! Nostrum, eveniet accusantium aliquid dolores labore distinctio cupiditate magni quas, aliquam atque repellendus sint. Voluptas!</p><a class="cases__item-link link" href="project.html">See Details</a>
                                 </div>
                               </div>
                               <div class="cases__item"><img class="cases__item-img" src="img/slider-item.jpg">
                                 <div class="cases__item-box"><strong class="cases__item-title">The name of project</strong>
                                   <p class="cases__item-subtitle">Pablo Escobar | for 1 month</p>
                                   <div class="cases__item-chips"><span class="chip">CSS3</span><span class="chip">HTML</span><span class="chip">React.js</span></div>
-                                  <p class="cases__item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos nostrum repellat nulla. Ex cupiditate voluptates veniam, corporis consectetur sapiente expedita necessitatibus, mollitia ipsa, voluptatem eius alias optio! Vero qui neque dicta tempora totam debitis quidem! Nostrum, eveniet accusantium aliquid dolores labore distinctio cupiditate magni quas, aliquam atque repellendus sint. Voluptas!</p><a class="cases__item-link link" href="#">See Details</a>
+                                  <p class="cases__item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos nostrum repellat nulla. Ex cupiditate voluptates veniam, corporis consectetur sapiente expedita necessitatibus, mollitia ipsa, voluptatem eius alias optio! Vero qui neque dicta tempora totam debitis quidem! Nostrum, eveniet accusantium aliquid dolores labore distinctio cupiditate magni quas, aliquam atque repellendus sint. Voluptas!</p><a class="cases__item-link link" href="project.html">See Details</a>
                                 </div>
                               </div>
                               <div class="cases__item"><img class="cases__item-img" src="img/slider-item.jpg">
                                 <div class="cases__item-box"><strong class="cases__item-title">The name of project</strong>
                                   <p class="cases__item-subtitle">Pablo Escobar | for 1 month</p>
                                   <div class="cases__item-chips"><span class="chip">CSS3</span><span class="chip">HTML</span><span class="chip">React.js</span></div>
-                                  <p class="cases__item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos nostrum repellat nulla. Ex cupiditate voluptates veniam, corporis consectetur sapiente expedita necessitatibus, mollitia ipsa, voluptatem eius alias optio! Vero qui neque dicta tempora totam debitis quidem! Nostrum, eveniet accusantium aliquid dolores labore distinctio cupiditate magni quas, aliquam atque repellendus sint. Voluptas!</p><a class="cases__item-link link" href="#">See Details</a>
+                                  <p class="cases__item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos nostrum repellat nulla. Ex cupiditate voluptates veniam, corporis consectetur sapiente expedita necessitatibus, mollitia ipsa, voluptatem eius alias optio! Vero qui neque dicta tempora totam debitis quidem! Nostrum, eveniet accusantium aliquid dolores labore distinctio cupiditate magni quas, aliquam atque repellendus sint. Voluptas!</p><a class="cases__item-link link" href="project.html">See Details</a>
                                 </div>
                               </div>
               </div>
@@ -193,12 +205,12 @@
         </div><img class="tech__elipce" src="img/tech-elipce.jpg">
       </section>
       <section class="section career">
-        <div class="container career__container">
-          <h2 class="section-title career__title animate__animated">Career</h2>
-          <p class="career__text animate__delay-1 animate__animated">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, ullam porro harum provident blanditiis maiores, excepturi perspiciatis dolorem deserunt aut culpa debitis sed iusto reiciendis voluptatibus asperiores ab quo dicta. Laborum iure nihil ullam pariatur. Ab, id vitae debitis quibusdam eos facere temporibus nisi laboriosam dolor, quidem illo similique eveniet?</p>
-          <div class="career__box animate__delay-2 animate__animated">
+        <div class="container career__container animate__animated">
+          <h2 class="section-title career__title">Career</h2>
+          <p class="career__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, ullam porro harum provident blanditiis maiores, excepturi perspiciatis dolorem deserunt aut culpa debitis sed iusto reiciendis voluptatibus asperiores ab quo dicta. Laborum iure nihil ullam pariatur. Ab, id vitae debitis quibusdam eos facere temporibus nisi laboriosam dolor, quidem illo similique eveniet?</p>
+          <div class="career__box">
             <div class="career__item"><small class="career__item-number">No.1</small><strong class="career__item-title">UI/UX Designer</strong>
-              <p class="career__item-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eveniet dolore natus distinctio quod? Qui, minima! Ea facere minus eveniet amet! Vel perspiciatis aliquid qui saepe, id, voluptas unde voluptatibus enim ea tempora dolores? Saepe eaque nobis voluptatem hic rem tempore quos beatae, id aperiam, quasi recusandae consequatur nemo aut.</p><a class="btn btn_wide career__item-btn" href="#">Learn more</a>
+              <p class="career__item-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eveniet dolore natus distinctio quod? Qui, minima! Ea facere minus eveniet amet! Vel perspiciatis aliquid qui saepe, id, voluptas unde voluptatibus enim ea tempora dolores? Saepe eaque nobis voluptatem hic rem tempore quos beatae, id aperiam, quasi recusandae consequatur nemo aut.</p><a class="btn btn_wide career__item-btn" href="vacancy.html">Learn more</a>
             </div>
           </div>
         </div>
@@ -252,14 +264,10 @@
       </section>
       <!--end contacts-->
     </div>
-    <div class="svg-sprite is-hidden"><?xml version="1.0" encoding="utf-8"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol fill="none" viewBox="0 0 70 48" id="approach" xmlns="http://www.w3.org/2000/svg"><path d="M67.246 15.257c.01.193-.004.389-.052.584l-4.318 17.27a1.963 1.963 0 01-1.894 1.487l-25.906.131H9.159a1.962 1.962 0 01-1.904-1.489L2.937 15.904a1.96 1.96 0 01-.052-.599A4.128 4.128 0 010 11.374a4.126 4.126 0 014.122-4.122 4.126 4.126 0 014.121 4.122c0 1.28-.586 2.425-1.505 3.181l5.406 5.447a7.376 7.376 0 005.202 2.166c2.293 0 4.48-1.09 5.857-2.914l8.884-11.771a4.106 4.106 0 01-1.209-2.913A4.126 4.126 0 0135 .45a4.126 4.126 0 014.121 4.121 4.104 4.104 0 01-1.144 2.843l.007.01 8.82 11.803a7.361 7.361 0 005.87 2.942 7.28 7.28 0 005.183-2.146l5.44-5.44a4.114 4.114 0 01-1.54-3.208 4.126 4.126 0 014.122-4.122A4.126 4.126 0 0170 11.374a4.125 4.125 0 01-2.754 3.883zM62.455 40.88a1.963 1.963 0 00-1.963-1.963H9.726a1.963 1.963 0 00-1.963 1.963v4.71c0 1.084.88 1.962 1.963 1.962h50.766a1.963 1.963 0 001.963-1.962v-4.71z" fill="#8B8BA6"/></symbol><symbol fill="none" viewBox="0 0 8 10" id="arrow-right" xmlns="http://www.w3.org/2000/svg"><path d="M8 5L.5 9.33V.67L8 5z" fill="#fff"/></symbol><symbol viewBox="0 0 512.001 512.001" fill="#fff" id="cancel" xmlns="http://www.w3.org/2000/svg"><path d="M284.286 256.002L506.143 34.144c7.811-7.811 7.811-20.475 0-28.285-7.811-7.81-20.475-7.811-28.285 0L256 227.717 34.143 5.859c-7.811-7.811-20.475-7.811-28.285 0-7.81 7.811-7.811 20.475 0 28.285l221.857 221.857L5.858 477.859c-7.811 7.811-7.811 20.475 0 28.285a19.938 19.938 0 0014.143 5.857 19.94 19.94 0 0014.143-5.857L256 284.287l221.857 221.857c3.905 3.905 9.024 5.857 14.143 5.857s10.237-1.952 14.143-5.857c7.811-7.811 7.811-20.475 0-28.285L284.286 256.002z"/></symbol><symbol fill="none" viewBox="0 0 25 20" id="envelope" xmlns="http://www.w3.org/2000/svg"><path d="M22.767 20c.562 0 1.05-.189 1.463-.562l-7.083-7.212-.49.359c-.53.398-.96.708-1.29.93-.33.223-.77.45-1.319.682-.549.232-1.06.348-1.534.348h-.028c-.475 0-.986-.116-1.535-.348-.549-.232-.988-.459-1.318-.682a32.79 32.79 0 01-1.29-.93l-.49-.36L.77 19.437c.414.373.901.562 1.463.562h20.535zM1.41 7.685c-.53-.36-1-.772-1.41-1.236V17.42l6.243-6.356a483.568 483.568 0 00-4.834-3.38zM23.605 7.685a410.94 410.94 0 00-4.846 3.382L25 17.421V6.45c-.4.455-.864.866-1.394 1.236z" fill="#fff"/><path d="M22.768 0H2.233C1.516 0 .966.246.58.738.193 1.231 0 1.847 0 2.585c0 .596.257 1.243.768 1.94.511.695 1.055 1.242 1.632 1.64.316.227 1.27.902 2.86 2.024a926.592 926.592 0 013.655 2.592l.208.151.385.282c.302.223.554.403.754.54.2.138.441.291.725.462.284.17.551.298.802.383.251.086.484.128.698.128h.028c.213 0 .446-.042.697-.128.251-.085.518-.213.802-.383a14.8 14.8 0 00.726-.462c.2-.137.45-.317.753-.54a106.555 106.555 0 01.593-.433l1.412-.999 5.117-3.617a6.698 6.698 0 001.702-1.748c.455-.681.683-1.396.683-2.144 0-.625-.221-1.16-.663-1.606C23.896.223 23.372 0 22.767 0z" fill="#fff"/></symbol><symbol fill="none" viewBox="0 0 19 25" id="map-point" xmlns="http://www.w3.org/2000/svg"><path d="M9.204 0C4.129 0 0 4.129 0 9.204c0 1.324.27 2.588.805 3.757 2.301 5.036 6.713 10.352 8.01 11.861a.513.513 0 00.777 0c1.297-1.509 5.71-6.825 8.011-11.86a8.975 8.975 0 00.805-3.758C18.408 4.13 14.278 0 9.204 0zm0 13.985a4.786 4.786 0 01-4.781-4.781 4.787 4.787 0 014.78-4.781 4.787 4.787 0 014.782 4.78 4.786 4.786 0 01-4.781 4.782z" fill="#fff"/></symbol><symbol fill="none" viewBox="0 0 25 25" id="phone" xmlns="http://www.w3.org/2000/svg"><path d="M24.356 18.446l-3.107-3.107c-.83-.83-2.278-.83-3.108 0l-.518.518 6.215 6.214.518-.518c.86-.86.857-2.25 0-3.107zM16.558 16.864c-.653.506-1.586.486-2.184-.113l-6.143-6.148c-.599-.598-.619-1.532-.112-2.184l-6.201-6.2c-2.668 3.11-2.563 7.794.38 10.738l9.723 9.726c2.825 2.826 7.452 3.2 10.738.381l-6.2-6.2zM9.644 3.73L6.537.622c-.83-.829-2.278-.83-3.108 0l-.518.518 6.215 6.215.518-.518c.86-.86.857-2.25 0-3.107z" fill="#fff"/></symbol><symbol fill="none" viewBox="0 0 52 52" id="quality" xmlns="http://www.w3.org/2000/svg"><path d="M49.913 23.664a3.787 3.787 0 00.983-1.785 3.902 3.902 0 00-.07-2.057 3.756 3.756 0 00-1.101-1.709 3.517 3.517 0 00-1.8-.842l-12.1-1.827a1.548 1.548 0 01-.737-.29 1.639 1.639 0 01-.513-.623L29.212 3.088a3.682 3.682 0 00-1.318-1.528A3.464 3.464 0 0026 .993c-.67 0-1.326.197-1.894.567a3.68 3.68 0 00-1.319 1.528L17.376 14.53a1.64 1.64 0 01-.513.623c-.218.16-.472.26-.737.29l-12.1 1.827c-.664.1-1.287.391-1.8.842a3.757 3.757 0 00-1.101 1.709 3.902 3.902 0 00-.07 2.057c.162.68.502 1.298.983 1.785l8.75 8.912c.181.19.316.42.394.674.079.254.098.524.057.788l-2 12.63a3.81 3.81 0 00.057 1.612 3.71 3.71 0 00.717 1.428 3.608 3.608 0 002.061 1.26 3.502 3.502 0 002.364-.346l10.825-5.95a1.594 1.594 0 011.476 0l10.825 5.91c.726.4 1.561.527 2.367.36a3.562 3.562 0 002.057-1.273 3.71 3.71 0 00.709-1.41 3.81 3.81 0 00.067-1.591L40.7 34.09a1.752 1.752 0 01.056-.788c.078-.254.213-.485.394-.674l8.763-8.964z" fill="#8B8BA6"/></symbol><symbol fill="none" viewBox="0 0 45 50" id="speed" xmlns="http://www.w3.org/2000/svg"><path d="M44.118 14.704c0-4.054-3.299-7.352-7.353-7.352a7.33 7.33 0 00-4.088 1.243 21.871 21.871 0 00-9.145-2.664v-2.99h2.94V0H17.65v2.94h2.94v2.991a21.873 21.873 0 00-9.145 2.664 7.33 7.33 0 00-4.088-1.243c-4.054 0-7.353 3.298-7.353 7.352 0 1.729.612 3.39 1.705 4.703-3.326 7.933-1.827 17.545 4.756 24.128 8.62 8.62 22.572 8.62 31.192 0a21.912 21.912 0 006.46-15.597c0-2.977-.586-5.865-1.704-8.53a7.355 7.355 0 001.705-4.704zM22.06 44.114c-8.919 0-16.175-7.257-16.175-16.176 0-8.918 7.256-16.174 16.175-16.174s16.175 7.256 16.175 16.174c0 8.92-7.256 16.175-16.175 16.175z" fill="#8C8CA6"/><path d="M35.213 26.468a13.172 13.172 0 00-2.816-6.785L30.38 21.7l-2.08-2.08 2.017-2.016a13.17 13.17 0 00-6.785-2.817v2.859H20.59v-2.859a13.17 13.17 0 00-6.785 2.817l2.017 2.017-2.08 2.08-2.017-2.018a13.171 13.171 0 00-2.816 6.785h2.858v2.941H8.91a13.17 13.17 0 002.816 6.786l2.017-2.017 2.08 2.079-2.017 2.017a13.17 13.17 0 006.785 2.817v-2.859h2.94v2.859a13.171 13.171 0 006.786-2.817L28.3 36.257l2.08-2.08 2.017 2.018a13.17 13.17 0 002.816-6.786h-2.858v-2.94h2.858zm-5.8 2.941h-8.822v-8.822h2.941v5.881h5.882v2.941z" fill="#8C8CA6"/></symbol><symbol fill="none" viewBox="0 0 50 46" id="team" xmlns="http://www.w3.org/2000/svg"><path d="M25 46l-3.5-3.5C8.5 31 0 23.25 0 13.75 0 6 6 0 13.75 0 18 0 22.25 2 25 5.25 27.75 2 32 0 36.25 0 44 0 50 6 50 13.75c0 9.5-8.5 17.25-21.5 28.75L25 46z" fill="#8B8BA6"/></symbol><symbol fill="none" viewBox="0 0 30 50" id="tech" xmlns="http://www.w3.org/2000/svg"><path d="M29.089 17.148a.833.833 0 00-.755-.481h-9.875l9.745-15.388A.833.833 0 0027.5 0H14.167a.834.834 0 00-.746.46l-12.5 25a.832.832 0 00.746 1.207h8.57L.898 48.843a.835.835 0 001.405.861l26.667-31.667a.834.834 0 00.118-.889z" fill="#8B8BA6"/></symbol></svg></div>
+    <div class="svg-sprite is-hidden"><?xml version="1.0" encoding="utf-8"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol fill="none" viewBox="0 0 8 10" id="arrow-right" xmlns="http://www.w3.org/2000/svg"><path d="M8 5L.5 9.33V.67L8 5z" fill="#fff"/></symbol><symbol viewBox="0 0 512.001 512.001" fill="#fff" id="cancel" xmlns="http://www.w3.org/2000/svg"><path d="M284.286 256.002L506.143 34.144c7.811-7.811 7.811-20.475 0-28.285-7.811-7.81-20.475-7.811-28.285 0L256 227.717 34.143 5.859c-7.811-7.811-20.475-7.811-28.285 0-7.81 7.811-7.811 20.475 0 28.285l221.857 221.857L5.858 477.859c-7.811 7.811-7.811 20.475 0 28.285a19.938 19.938 0 0014.143 5.857 19.94 19.94 0 0014.143-5.857L256 284.287l221.857 221.857c3.905 3.905 9.024 5.857 14.143 5.857s10.237-1.952 14.143-5.857c7.811-7.811 7.811-20.475 0-28.285L284.286 256.002z"/></symbol><symbol fill="none" viewBox="0 0 25 20" id="envelope" xmlns="http://www.w3.org/2000/svg"><path d="M22.767 20c.562 0 1.05-.189 1.463-.562l-7.083-7.212-.49.359c-.53.398-.96.708-1.29.93-.33.223-.77.45-1.319.682-.549.232-1.06.348-1.534.348h-.028c-.475 0-.986-.116-1.535-.348-.549-.232-.988-.459-1.318-.682a32.79 32.79 0 01-1.29-.93l-.49-.36L.77 19.437c.414.373.901.562 1.463.562h20.535zM1.41 7.685c-.53-.36-1-.772-1.41-1.236V17.42l6.243-6.356a483.568 483.568 0 00-4.834-3.38zM23.605 7.685a410.94 410.94 0 00-4.846 3.382L25 17.421V6.45c-.4.455-.864.866-1.394 1.236z" fill="#fff"/><path d="M22.768 0H2.233C1.516 0 .966.246.58.738.193 1.231 0 1.847 0 2.585c0 .596.257 1.243.768 1.94.511.695 1.055 1.242 1.632 1.64.316.227 1.27.902 2.86 2.024a926.592 926.592 0 013.655 2.592l.208.151.385.282c.302.223.554.403.754.54.2.138.441.291.725.462.284.17.551.298.802.383.251.086.484.128.698.128h.028c.213 0 .446-.042.697-.128.251-.085.518-.213.802-.383a14.8 14.8 0 00.726-.462c.2-.137.45-.317.753-.54a106.555 106.555 0 01.593-.433l1.412-.999 5.117-3.617a6.698 6.698 0 001.702-1.748c.455-.681.683-1.396.683-2.144 0-.625-.221-1.16-.663-1.606C23.896.223 23.372 0 22.767 0z" fill="#fff"/></symbol><symbol fill="none" viewBox="0 0 19 25" id="map-point" xmlns="http://www.w3.org/2000/svg"><path d="M9.204 0C4.129 0 0 4.129 0 9.204c0 1.324.27 2.588.805 3.757 2.301 5.036 6.713 10.352 8.01 11.861a.513.513 0 00.777 0c1.297-1.509 5.71-6.825 8.011-11.86a8.975 8.975 0 00.805-3.758C18.408 4.13 14.278 0 9.204 0zm0 13.985a4.786 4.786 0 01-4.781-4.781 4.787 4.787 0 014.78-4.781 4.787 4.787 0 014.782 4.78 4.786 4.786 0 01-4.781 4.782z" fill="#fff"/></symbol><symbol fill="none" viewBox="0 0 25 25" id="phone" xmlns="http://www.w3.org/2000/svg"><path d="M24.356 18.446l-3.107-3.107c-.83-.83-2.278-.83-3.108 0l-.518.518 6.215 6.214.518-.518c.86-.86.857-2.25 0-3.107zM16.558 16.864c-.653.506-1.586.486-2.184-.113l-6.143-6.148c-.599-.598-.619-1.532-.112-2.184l-6.201-6.2c-2.668 3.11-2.563 7.794.38 10.738l9.723 9.726c2.825 2.826 7.452 3.2 10.738.381l-6.2-6.2zM9.644 3.73L6.537.622c-.83-.829-2.278-.83-3.108 0l-.518.518 6.215 6.215.518-.518c.86-.86.857-2.25 0-3.107z" fill="#fff"/></symbol></svg></div>
     <script src="js/jquery-2.2.4.min.js"></script>
     <script src="js/fullpage.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/app.js"></script>
-    <script>
-      //todo deal with svg icons on hover
-      //another slider arrow icons
-    </script>
   </body>
 </html>

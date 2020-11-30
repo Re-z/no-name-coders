@@ -3,3 +3,30 @@ mixin elipce(className)
 
 mixin dots(className)
 	img.dots(src="img/dots.svg", class=className alt="dots")
+
+mixin header(pageName)
+	header.header
+		.container
+			.header__inner
+				img.header__logo(src="https://www.placecage.com/200/50")
+				.header__burger
+					span
+					span
+					span
+				nav.header__menu
+					.header__menu-mob
+						img.header__logo-mob(src="https://www.placecage.com/200/50")
+						.header__close
+							svg(class="icon-cancel"): use(xlink:href="#cancel")
+					.header__links
+						-var links = {'intro': 'Intro', 'about-us': 'About Us', 'services': 'Services', 'cases': 'Our Cases', 'technology': 'Technology', 'career': 'Career', 'contacts-us': 'Contact Us'} 
+						if pageName =='mainPage'
+							each val, key in links
+								a.header__link(data-anchor=key href="#"+key)=val
+						else 
+							each val, key in links
+								a.header__link(data-anchor=key href="index.html#"+key)=val
+
+					.header__footer
+						p Copyright © 2020 Site-name.com All rights reserved. 
+						
