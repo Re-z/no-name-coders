@@ -331,6 +331,9 @@ button
     &:hover
       background: $white
       box-shadow: 0px 0px 60px rgba(90, 125, 249, 0.6)
+      position: relative
+      z-index: 1
+
       strong,p
         color: $black
       path
@@ -439,6 +442,7 @@ button
     &-btns
       margin-top: 20px
       display: flex
+      
       +r($t)
         display: none
       button
@@ -449,6 +453,9 @@ button
         margin-right: 5px
         color: $black
         font-size: 30px
+        display: flex !important
+        align-items: center
+        justify-content: center
         &:active
           color: $white
           background: #3B64F5
